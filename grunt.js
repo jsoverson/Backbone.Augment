@@ -10,7 +10,12 @@ module.exports = function(grunt) {
       tasks: 'jasmine'
     },
     jasmine : {
-      src : 'src/**/*.js',
+      src : [
+        'vendor/jquery*.js',
+        'vendor/underscore.js',
+        'vendor/backbone.js',
+        'src/**/*.js'
+      ],
       specs : 'spec/**/*.js'
     },
     jshint: {
