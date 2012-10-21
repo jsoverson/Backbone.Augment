@@ -82,7 +82,7 @@ var augment = {
   augment : function(ImplementingView) {
     return ImplementingView.extend({
       render : function() {
-        Implementing.prototype.render.apply(this,arguments);
+        ImplementingView.prototype.render.apply(this,arguments);
       }
     });
   }
