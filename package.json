@@ -1,8 +1,8 @@
 {
-  "name"            : "grunt-jasmine-runner-example",
-  "description"     : "Example application using grunt-jasmine-runner",
-  "version"         : "0.1.1",
-  "homepage"        : "https://github.com/jsoverson/grunt-jasmine-runner-example",
+  "name"            : "Backbone.Augment",
+  "description"     : "Simple extension to add addon-like functionality to Backbone objects (Views, Models, Collections)",
+  "version"         : "0.1.0",
+  "homepage"        : "https://github.com/jsoverson/Backbone.Augment",
   "author"          : {
     "name"  : "Jarrod Overson",
     "email" : "jsoverson@gmail.com",
@@ -10,13 +10,13 @@
   },
   "repository"      : {
     "type" : "git",
-    "url"  : "git://github.com/jsoverson/grunt-jasmine-runner-example.git"
+    "url"  : "git://github.com/jsoverson/Backbone.Augment.git"
   },
   "scripts"         : {
     "test" : "grunt jasmine"
   },        
   "bugs"            : {
-    "url" : "https://github.com/jsoverson/grunt-jasmine-runner-example/issues"
+    "url" : "https://github.com/jsoverson/Backbone.Augment/issues"
   },
   "devDependencies" : {
     "grunt-jasmine-runner" : "latest",
