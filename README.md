@@ -14,7 +14,7 @@ Backbone itself includes `extend()` and the developers seem unwilling to allow i
 inheritance chain. This is entirely up to them but many still consider that valid usage. Augment allows that and more.
 
 The benefit of augments is that their design keeps the augmented object in its scope allowing you to
-write extensible, chainable, reusable augments without knowing who is implementing the augment.
+write extensible, chainable, reusable augments without knowing what is being augmented.
 
 Have you ever seen code in Backbone like :
 
