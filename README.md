@@ -89,6 +89,11 @@ var augment = {
 }
 ```
 
+*"But wait, that looks like the example you were trying to avoid..."*
+
+The important difference is that your implementing augmenter is passed in as an argument, meaning we don't
+know where we're being used. This is an important abstraction point that encourages much more reusable code.
+
 ## Not just an inverted `extend()`
 
 An augment's sole requirement is that it includes an `augment()` method. This allows you free reign to do
