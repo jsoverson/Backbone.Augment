@@ -13,8 +13,8 @@ Augment offers unrestrained functionality around a simple plugin and implementat
 Backbone itself includes `extend()` and the developers seem unwilling to allow intuitive access up the
 inheritance chain. This is entirely up to them but many still consider that valid usage. Augment allows that and more.
 
-The benefit of augments is that their design keeps the augmented object in its scope allowing you to
-write extensible, chainable, reusable augments without knowing what is being augmented.
+The benefit of augments is that their design keeps the implementing object in its scope allowing you to
+write extensible, chainable, and reusable augments without knowing what is being augmented.
 
 Have you ever seen code in Backbone like :
 
@@ -30,11 +30,11 @@ var SomeChildView = SomeView.extend({
 })
 ```
 
-The problem is requiring your extensions to know what they are extending. There have been numerous pull
-requests for backbone attempting to solve this in easier, more intuitive ways, but the developers
+The problem shown is that your extensions need to know what they are extending. There have been numerous pull
+requests for Backbone that attempt to solve this in easier, more intuitive ways but the developers
 are reluctant to expose this functionality.
 
-## How?
+## How do you use augments with Backbone?
 
 ### Normal backbone extend
 
