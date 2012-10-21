@@ -10,11 +10,11 @@ Simple extension to add addon-like functionality to Backbone objects (Views, Mod
 The best plugin architectures offer maximum flexibility around a simple, organized specification.
 Augment offers unrestrained functionality around a simple plugin and implementation signature.
 
-Backbone itself includes `extend` and the developers seem unwilling to allow intuitive access up the
-inheritance chain. This is entirely up to them but that is still valid usage. Augment allows that and more.
+Backbone itself includes `extend()` and the developers seem unwilling to allow intuitive access up the
+inheritance chain. This is entirely up to them but many still consider that valid usage. Augment allows that and more.
 
-The benefit of augments is that their design keeps the augmented view in its scope allowing you to
-write extensible, chainable, reusable augments without knowing who is implementing.
+The benefit of augments is that their design keeps the augmented object in its scope allowing you to
+write extensible, chainable, reusable augments without knowing who is implementing the augment.
 
 Have you ever seen code in Backbone like :
 
