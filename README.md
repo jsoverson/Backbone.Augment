@@ -44,8 +44,21 @@ var NewView = Backbone.View.extend({ /* new stuff */});
 
 ### Using augment
 
+The `augment` function is available on all of the basic Backbone types
+that you would normal `extend`:
+
+* Backbone.View
+* Backbone.Model
+* Backbone.Collection
+* Backbone.Router
+
+You can call the `augment` function from the type directly, or from the
+`.prototype`, as needed.
+
 ```
 var NewView = Backbone.View.augment(augment1, augment2, etc);
+
+NewView.prototype.augment(augment3, augment4, etc);
 ```
 
 ### Augment with extend
