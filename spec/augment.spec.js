@@ -4,6 +4,10 @@
 describe("augment", function() {
   'use strict';
 
+  it("should be available as Backbone.Augment", function(){
+    expect(typeof Backbone.Augment).toEqual("function");
+  });
+
   it("should exist on all core backbone objects", function() {
     expect(typeof Backbone.Model.augment).toEqual('function');
     expect(typeof Backbone.Collection.augment).toEqual('function');
@@ -38,4 +42,27 @@ describe("augment", function() {
     newViewInstance.foo();
     expect(augmentSpy).toHaveBeenCalled();
   });
+
+  describe("when using an object that does not provide an augment function", function(){
+    var aug = {};
+
+    function run(){
+      Backbone.View.augment(aug);
+    }
+
+    it("should throw an error", function(){
+      expect(run).toThrow("Augmenting object does not provie an `augment` function.");
+    });
+  });
+
+  describe("when specifying an undefined or null object as an augmenter", function(){
+    function run(){
+      Backbone.View.augment(undefined);
+    }
+
+    it("should throw an error", function(){
+      expect(run).toThrow("Specified augmenting object is null or undefined");
+    });
+  });
+
 });

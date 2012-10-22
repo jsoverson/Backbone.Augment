@@ -1,3 +1,7 @@
 _SpecRunner.html
 node_modules
 .idea
+*.swp
+*.swo
+.DS_Store
+*.orig
