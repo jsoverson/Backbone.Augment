@@ -9,6 +9,12 @@
 }(this, function (Backbone) {
   "use strict";
 
+  // Augment
+  // -------
+  //
+  // Augment an object with additional functionality, allowing
+  // object composition instead of just inheritance or simple
+  // extend functions
   function augment(/* augments... */) {
     var self = this;
     for (var i = 0; i < arguments.length; i++) {
@@ -29,7 +35,11 @@
     return self;
   }
 
-  Backbone.Model.augment = Backbone.Collection.augment = Backbone.View.augment = augment;
+  Backbone.Augment = 
+    Backbone.Model.augment = 
+    Backbone.Collection.augment = 
+    Backbone.View.augment = 
+    augment;
 
   return augment;
 }));

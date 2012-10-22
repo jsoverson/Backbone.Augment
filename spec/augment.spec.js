@@ -4,6 +4,10 @@
 describe("augment", function() {
   'use strict';
 
+  it("should be available as Backbone.Augment", function(){
+    expect(typeof Backbone.Augment).toEqual("function");
+  });
+
   it("should exist on all core backbone objects", function() {
     expect(typeof Backbone.Model.augment).toEqual('function');
     expect(typeof Backbone.Collection.augment).toEqual('function');
