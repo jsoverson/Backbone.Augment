@@ -25,7 +25,7 @@
       }
 
       if (!aug.augment){
-        var error = Error("Augmenting object does not provie an `augment` function.");
+        var error = Error("Augmenting object does not provide an `augment` function.");
         error.augmentObject = aug;
         throw error;
       }
