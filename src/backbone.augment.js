@@ -35,11 +35,22 @@
     return self;
   }
 
-  Backbone.Augment = 
-    Backbone.Model.augment = 
-    Backbone.Collection.augment = 
-    Backbone.View.augment = 
-    augment;
+  // Export The API
+  // --------------
+ 
+  Backbone.Augment = augment;
+
+  Backbone.Model.augment = _.bind(augment, Backbone.Model);
+  Backbone.Model.prototype.augment = augment;
+
+  Backbone.Collection.augment = _.bind(augment, Backbone.Collection);
+  Backbone.Collection.prototype.augment = augment;
+
+  Backbone.View.augment = _.bind(augment, Backbone.View);
+  Backbone.View.prototype.augment = augment;
+
+  Backbone.Router.augment = _.bind(augment, Backbone.Router);
+  Backbone.Router.prototype.augment = augment;
 
   return augment;
 }));

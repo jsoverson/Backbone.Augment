@@ -12,6 +12,14 @@ describe("augment", function() {
     expect(typeof Backbone.Model.augment).toEqual('function');
     expect(typeof Backbone.Collection.augment).toEqual('function');
     expect(typeof Backbone.View.augment).toEqual('function');
+    expect(typeof Backbone.Router.augment).toEqual('function');
+  });
+
+  it("should exist on all core backbone object prototypes", function() {
+    expect(typeof Backbone.Model.prototype.augment).toEqual('function');
+    expect(typeof Backbone.Collection.prototype.augment).toEqual('function');
+    expect(typeof Backbone.View.prototype.augment).toEqual('function');
+    expect(typeof Backbone.Router.prototype.augment).toEqual('function');
   });
 
   it("should exist on extended objects", function() {
