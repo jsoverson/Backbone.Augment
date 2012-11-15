@@ -35,11 +35,48 @@
     return self;
   }
 
-  Backbone.Augment = 
-    Backbone.Model.augment = 
-    Backbone.Collection.augment = 
-    Backbone.View.augment = 
-    augment;
+  // Mix Into
+  // --------
+  //
+  // Mix a function from one object in to another, while preserving
+  // the context of the original object when executing the function
+  // on the target.
+
+  augment.mixInto = function(target, source, methodNames){
+    // ignore the actual args list and build from arguments so we can
+    // be sure to get all of the method names
+    var args = Array.prototype.slice.apply(arguments);
+    target = args.shift();
+    source = args.shift();
+    methodNames = args;
+
+    var method;
+    var length = methodNames.length;
+    for(var i = 0; i < length; i++){
+      method = methodNames[i];
+      
+      // bind the function from the source and assign the
+      // bound function to the target
+      target[method] = _.bind(source[method], source);
+    }
+  };
+
+  // Export The API
+  // --------------
+ 
+  Backbone.Augment = augment;
+
+  Backbone.Model.augment = _.bind(augment, Backbone.Model);
+  Backbone.Model.prototype.augment = augment;
+
+  Backbone.Collection.augment = _.bind(augment, Backbone.Collection);
+  Backbone.Collection.prototype.augment = augment;
+
+  Backbone.View.augment = _.bind(augment, Backbone.View);
+  Backbone.View.prototype.augment = augment;
+
+  Backbone.Router.augment = _.bind(augment, Backbone.Router);
+  Backbone.Router.prototype.augment = augment;
 
   return augment;
 }));
