@@ -51,7 +51,7 @@ describe("augment", function() {
     }
 
     it("should throw an error", function(){
-      expect(run).toThrow("Augmenting object does not provie an `augment` function.");
+      expect(run).toThrow("Augmenting object does not provide an `augment` function.");
     });
   });
 
